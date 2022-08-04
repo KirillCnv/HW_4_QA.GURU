@@ -32,6 +32,7 @@ public class TestGitHubPage {
         //Убедитесься, что в списке есть страница SoftAssertions
         $(".markdown-body").shouldHave(text("Soft assertions"));
         // Открвыть страницу SoftAssertions
+        $(byText("Show 2 more pages…")).scrollTo().click();
         $(byText("Soft assertions")).click();
         // Проверить, что внутри есть пример кода для JUnit5
         $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
